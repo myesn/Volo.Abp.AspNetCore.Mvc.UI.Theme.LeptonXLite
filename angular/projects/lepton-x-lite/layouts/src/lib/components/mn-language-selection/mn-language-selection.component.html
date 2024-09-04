@@ -1,0 +1,20 @@
+@if (selectedLanguage$ | async; as selectedLanguage) {
+  <div
+    class="lpx-language-selection btn-toggle"
+    role="button"
+    (click)="toggleMenu()"
+  >
+    <lpx-icon iconClass="bi bi-globe"></lpx-icon>
+    {{ selectedLanguage?.displayName }}
+  </div>
+}
+
+@if (langs$ | async; as langs) {
+  <div class="action-group-menu" [class.d-none]="menuHidden">
+    @for (lang of langs; track $index) {
+      <a class="action" role="button" (click)="onLanguageSelection(lang)">
+        {{ lang.displayName }}
+      </a>
+    }
+  </div>
+}

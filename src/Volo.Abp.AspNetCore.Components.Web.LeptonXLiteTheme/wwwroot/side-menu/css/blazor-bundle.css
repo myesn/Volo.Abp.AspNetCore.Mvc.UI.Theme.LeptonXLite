@@ -1,0 +1,245 @@
+.b-table {
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+.b-table .btn {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.765625rem !important;
+  width: auto;
+}
+.b-table.table > :not(:first-child) {
+  border-top: 1px solid #e7e9ec;
+}
+.b-table.table thead th,
+.b-table.table thead td {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.b-table.table tbody th,
+.b-table.table tbody td {
+  padding: 1rem 1.25rem !important;
+  vertical-align: middle;
+}
+.b-table.table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+.b-table.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #e7e9ec;
+}
+
+.card .b-table {
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0rem !important;
+}
+
+.entry-row .content-header-title {
+  font-size: 1.5em !important;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.entry-row .breadcrumb {
+  display: none;
+}
+.entry-row .btn {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.765625rem !important;
+  margin-right: 10px;
+}
+
+/* TO DO: Remove this Arm */
+.form-group.my-auto.ms-2.d-none.d-md-inline-block {
+  font-size: 0.875em;
+  opacity: 0.65;
+  padding-right: 0.75em;
+}
+
+.lpx-content-toolbar .btn {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.765625rem !important;
+}
+
+.lpx-theme-light .excubo-blazor-treeview-item svg path {
+  stroke: #000 !important;
+}
+
+.lpx-theme-dark .excubo-blazor-treeview-item svg path {
+  stroke: #ddd !important;
+}
+
+.editor-toolbar {
+  border-top-color: var(--lpx-border-color) !important;
+  border-left-color: var(--lpx-border-color) !important;
+  border-right-color: var(--lpx-border-color) !important;
+}
+.editor-toolbar button.active,
+.editor-toolbar button:hover {
+  border-color: var(--lpx-border-color) !important;
+  background-color: var(--lpx-card-bg) !important;
+  color: var(--lpx-card-title-text-color) !important;
+}
+
+.CodeMirror {
+  background: #eeeeee !important;
+  color: #161616 !important;
+}
+.CodeMirror .CodeMirror-gutters {
+  border-color: var(--lpx-border-color) !important;
+  background-color: rgba(var(--lpx-content-bg-rgb), 0.9) !important;
+}
+
+.lpx-theme-dark .flatpickr-calendar {
+  background: var(--lpx-content-bg);
+  box-shadow: 1px 0 0 var(--lpx-content-bg), -1px 0 0 var(--lpx-content-bg), 0 1px 0 var(--lpx-content-bg), 0 -1px 0 var(--lpx-content-bg), 0 3px 13px rgba(27, 27, 27, 0.08);
+  border: 1px solid #23262a;
+}
+.lpx-theme-dark .flatpickr-calendar.arrowTop:before {
+  border-bottom-color: var(--lpx-border-color);
+  border-width: 9px;
+  margin: 0 -9px;
+}
+.lpx-theme-dark .flatpickr-calendar.arrowTop:after {
+  border-width: 8px;
+  margin: 0 -8px;
+  border-bottom-color: var(--lpx-content-bg);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-weekday {
+  color: var(--lpx-content-text);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected {
+  color: #fff;
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-current-month {
+  color: var(--lpx-content-text);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-months .flatpickr-next-month {
+  color: var(--lpx-content-text);
+  fill: var(--lpx-content-text);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months,
+.lpx-theme-dark .flatpickr-calendar .numInputWrapper {
+  background-color: #121212;
+  color: #eee;
+  border-radius: 0.5rem;
+  border: 1px solid #23262a;
+  padding: 0.3rem;
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowUp:after {
+  border-bottom-color: var(--lpx-content-text);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-top-color: var(--lpx-content-text);
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.prevMonthDay.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.nextMonthDay.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.today.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.prevMonthDay.today.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.nextMonthDay.today.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.prevMonthDay:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.nextMonthDay:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day:focus,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.prevMonthDay:focus,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.nextMonthDay:focus {
+  background: rgba(0, 123, 255, 0.5);
+  border-color: rgba(0, 123, 255, 0);
+  color: #fff;
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange.inRange,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected:focus,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange:focus,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange:focus,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange:hover,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected.prevMonthDay,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange.prevMonthDay,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange.prevMonthDay,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected.nextMonthDay,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.startRange.nextMonthDay,
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.endRange.nextMonthDay {
+  background: rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+  color: #fff;
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.selected {
+  background: #007bff;
+}
+.lpx-theme-dark .flatpickr-calendar .flatpickr-day.inRange {
+  box-shadow: -5px 0 #184b8e, 5px 0 0 #184b8e;
+}
+.lpx-theme-dark .flatpickr-calendar.hasTime .flatpickr-time {
+  border-top: 1px solid var(--lpx-content-bg);
+}
+.lpx-theme-dark .flatpickr-calendar.hasTime .flatpickr-time .numInputWrapper {
+  padding: 0;
+}
+.lpx-theme-dark .flatpickr-time .flatpickr-time-separator,
+.lpx-theme-dark .flatpickr-time .flatpickr-am-pm,
+.lpx-theme-dark .flatpickr-time input.flatpickr-hour,
+.lpx-theme-dark .flatpickr-time input.flatpickr-minute,
+.lpx-theme-dark .flatpickr-time input.flatpickr-second {
+  color: #9da5b4;
+}
+.lpx-theme-dark .flatpickr-time input:hover,
+.lpx-theme-dark .flatpickr-time .flatpickr-am-pm:hover,
+.lpx-theme-dark .flatpickr-time input:focus,
+.lpx-theme-dark .flatpickr-time .flatpickr-am-pm:focus {
+  background: #121212;
+  color: #9da5b4;
+}
+
+.tree-view > div {
+  position: relative;
+}
+.tree-view > div .tree-view-title {
+  display: block;
+  width: 100%;
+  padding-left: 1rem !important;
+}
+.tree-view > div .tree-view-title > span {
+  display: block;
+}
+.tree-view > div .tree-view-title .p-1 {
+  border-radius: 0.5rem;
+}
+.tree-view > div .tree-view-title .bg-primary.text-white {
+  background-color: #f5f5f7 !important;
+  color: #686b6e !important;
+}
+.tree-view > div .tree-view-title .bg-primary.text-white .text-primary {
+  color: var(--lpx-brand) !important;
+}
+.tree-view > div .tree-view-title span.ms-1.me-1 > span {
+  display: none;
+}
+.tree-view > div .tree-view-icon {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.tree-view {
+  min-height: 300px;
+}
+.tree-view .tree-view {
+  min-height: inherit;
+}
+
+.table-responsive {
+  min-height: 580px;
+  margin-bottom: 1rem;
+}

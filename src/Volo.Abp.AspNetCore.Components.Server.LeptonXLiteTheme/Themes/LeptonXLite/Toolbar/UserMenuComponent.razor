@@ -1,0 +1,56 @@
+﻿@using Volo.Abp.AspNetCore.Components.Web.LeptonXLiteTheme.Navigation
+<AuthorizeView>
+	<Authorized>
+		<div class="dropdown">
+			<div class="lpx-user-profile dropdown-toggle" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+				@* TODO: Find out what to do with avatar.
+					<div class="lpx-avatar">
+					<img class="lpx-avatar-img" src="@ProfileImageUrl" alt="@UserName avatar">
+					</div>
+				*@
+
+				@if (TenantName.IsNullOrEmpty())
+				{
+					<span class="user-full-name">@UserFullName</span>
+				}
+				else
+				{
+					<span class="user-full-name"><i>@CurrentTenant.Name</i>\@UserFullName</span>
+				}
+			</div>
+			<div class="dropdown-menu" aria-labelledby="userDropdown">
+				@for (var i = 0; i < UserMenu.Items.Count; i++)
+				{
+					var item = UserMenu.Items[i];
+
+					var customComponentType = item.GetComponentTypeOrDefault();
+					
+					if (i == UserMenu.Items.Count - 1) // If last element
+					{
+						<div class="dropdown-divider"></div>
+					}
+					
+					if (customComponentType != null)
+					{
+						<DynamicComponent Type="@customComponentType" />
+					}
+					else
+					{
+						<a class="dropdown-item @item.CssClass" href="@item.Url.TrimStart('/', '~')" target="@item.Target" id="@item.ElementId">
+							<span class="lpx-menu-item-icon">
+								<i class="lpx-icon @item.Icon" />
+							</span>
+							<span>
+								@item.DisplayName
+							</span>
+						</a>
+					}
+				}
+			</div>
+		</div>
+	</Authorized>
+	<NotAuthorized>
+		<a class="nav-link" href="Account/Login">@L["Login"]</a>
+	</NotAuthorized>
+</AuthorizeView>

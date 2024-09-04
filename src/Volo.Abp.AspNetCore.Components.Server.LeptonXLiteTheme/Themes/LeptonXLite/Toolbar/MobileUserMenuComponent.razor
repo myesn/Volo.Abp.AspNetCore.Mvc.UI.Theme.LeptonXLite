@@ -1,0 +1,39 @@
+﻿
+<AuthorizeView>
+	<Authorized>
+		<div class="lpx-user-profile btn-toggle lpx-toggle" data-lpx-toggle="mobile-user-actions" role="button">
+			<div class="lpx-avatar">
+				@* TODO: Find out what to do with user avatar.*@
+				@*<img class="lpx-avatar-img" src="https://avatars.githubusercontent.com/u/1210527" alt="avatar" />*@
+			</div>
+
+			<span class="user-full-name">@UserFullName</span>
+		</div>
+		<div class="action-group-menu d-none" id="mobile-user-actions">
+
+			@for (var i = 0; i < UserMenu.Items.Count; i++)
+			{
+				var item = UserMenu.Items[i];
+
+				if (i == UserMenu.Items.Count - 1) // If last element
+				{
+					<div class="divider"></div>
+				}
+
+				<a class="action @item.CssClass" role="link" href="@item.Url.TrimStart('/', '~')" target="@item.Target" id="@item.ElementId">
+					<span class="lpx-menu-item-icon">
+						<i class="lpx-icon bi @item.Icon" />
+					</span>
+					<span>
+						@item.DisplayName
+					</span>
+				</a>
+			}
+
+			<div class="divider"></div>
+		</div>
+	</Authorized>
+	<NotAuthorized>
+		<a class="nav-link" href="Account/Login">@L["Login"]</a>
+	</NotAuthorized>
+</AuthorizeView>

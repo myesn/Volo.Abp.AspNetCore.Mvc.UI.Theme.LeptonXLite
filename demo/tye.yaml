@@ -1,0 +1,28 @@
+name: LeptonX Lite ABP Demo
+services:
+- name: httpapi-host
+  project: LeptonXLite.DemoApp.HttpApi.Host/LeptonXLite.DemoApp.HttpApi.Host.csproj
+  bindings:
+  - port: 44305
+    protocol: https
+- name: web
+  project: LeptonXLite.DemoApp.Web/LeptonXLite.DemoApp.Web.csproj
+  replicas: 1
+  bindings:
+  - port: 44302
+    protocol: https
+- name: blazor
+  project: LeptonXLite.DemoApp.Blazor/LeptonXLite.DemoApp.Blazor.csproj
+  bindings:
+  - port: 44307
+    protocol: https
+- name: blazor-server
+  project: LeptonXLite.DemoApp.Blazor.Server/LeptonXLite.DemoApp.Blazor.Server.csproj
+  bindings:
+  - port: 44314
+    protocol: https
+# - name: mongodb
+#   image: mongo:latest
+#   bindings:
+#     - port: 27017
+#       protocol: mongodb

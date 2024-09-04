@@ -1,0 +1,27 @@
+﻿@using System.Globalization;
+
+@if (ViewModel.HasLanguages)
+{
+	<div class="lpx-language-selection dropdown" data-lpx-language-selection="something">
+		<div class="dropdown-toggle"
+		 role="button"
+		 id="languageDropdown"
+		 data-bs-toggle="dropdown"
+		 aria-expanded="false">
+			<i class="lpx-icon bi bi-globe"></i>
+			<span>@(new CultureInfo(ViewModel.CurrentLanguage.CultureName).TwoLetterISOLanguageName.ToUpperInvariant())</span>
+		</div>
+		<div class="dropdown-menu" aria-labelledby="languageDropdown">
+			@foreach (var language in ViewModel.Languages)
+			{
+				var twoLetterLanguageName = new CultureInfo(language.CultureName).TwoLetterISOLanguageName.ToUpperInvariant();
+
+				<button
+					@onclick="()=>ViewModel.LanguagePlatformManager.ChangeAsync(language)"
+					class="dropdown-item" 
+					data-lpx-language-option="@twoLetterLanguageName">@language.DisplayName / @twoLetterLanguageName</button>
+
+			}
+		</div>
+	</div>
+}	

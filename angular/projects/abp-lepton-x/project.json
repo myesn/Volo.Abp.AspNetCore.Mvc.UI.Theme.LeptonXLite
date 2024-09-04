@@ -1,0 +1,37 @@
+{
+  "name": "abp-lepton-x",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/abp-lepton-x/src",
+  "prefix": "abp",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/libs/abp-lepton-x"],
+      "options": {
+        "project": "libs/abp-lepton-x/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/abp-lepton-x/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/abp-lepton-x/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/abp-lepton-x"],
+      "options": {
+        "jestConfig": "libs/abp-lepton-x/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["lepton-x-lite", "lepton-x-abp-core"]
+}

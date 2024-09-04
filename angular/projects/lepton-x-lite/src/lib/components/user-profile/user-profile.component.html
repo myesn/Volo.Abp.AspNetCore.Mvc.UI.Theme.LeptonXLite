@@ -1,0 +1,38 @@
+@if (user$ | async; as userProfile) {
+  @if (userProfile.userName) {
+    <div ngbDropdown>
+      <div class="lpx-user-profile" ngbDropdownToggle role="button">
+        <lpx-avatar [avatar]="userProfile.avatar"></lpx-avatar>
+        <span class="user-full-name">{{ userProfile.fullName }}</span>
+      </div>
+      @if (userProfile.userActionGroups) {
+        <div ngbDropdownMenu>
+          @for (
+            actionGroup of userProfile.userActionGroups;
+            track $index;
+            let last = $last
+          ) {
+            @for (action of actionGroup; track $index) {
+              @if (action.component) {
+                <ng-container
+                  *ngComponentOutlet="action.component; injector: injector"
+                ></ng-container>
+              }
+              @if (!action.component) {
+                <a
+                  ngbDropdownItem
+                  (click)="onActionClick(action)"
+                  [routerLink]="action.link"
+                  >{{ action.text || '' | lpxTranslate | async }}
+                </a>
+              }
+            }
+            @if (!last) {
+              <div class="dropdown-divider"></div>
+            }
+          }
+        </div>
+      }
+    </div>
+  }
+}

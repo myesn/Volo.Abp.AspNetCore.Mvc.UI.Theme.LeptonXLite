@@ -1,0 +1,116 @@
+<lpx-layout #layout>
+  <ng-template lpx-navbar-panel>
+    <lpx-navbar
+      *abpReplaceableTemplate="{
+        componentKey: navbarKey
+      }"
+    >
+      <ng-container *abpIfReplaceableTemplateExists="logoKey">
+        <ng-template lpx-logo-panel>
+          <ng-container *abpReplaceableTemplate="{ componentKey: logoKey }">
+          </ng-container>
+        </ng-template>
+      </ng-container>
+
+      <ng-template lpx-navbar-routes let-items>
+        <lpx-navbar-routes
+          *abpReplaceableTemplate="{
+            componentKey: routesKey,
+            inputs: {
+              navbarItems: items
+            }
+          }"
+          [navbarItems]="items"
+        >
+        </lpx-navbar-routes>
+      </ng-template>
+    </lpx-navbar>
+  </ng-template>
+
+  <ng-container *abpIfReplaceableTemplateExists="navItemsKey">
+    <ng-template lpx-topbar-content>
+      <ng-container *abpReplaceableTemplate="{ componentKey: navItemsKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="logoKey">
+    <ng-template lpx-logo-panel>
+      <ng-container *abpReplaceableTemplate="{ componentKey: logoKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="currentUserKey">
+    <ng-template lpx-user-profile>
+      <ng-container *abpReplaceableTemplate="{ componentKey: currentUserKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="currentUserImageKey">
+    <ng-template lpx-current-user-image-panel>
+      <ng-container
+        *abpReplaceableTemplate="{ componentKey: currentUserImageKey }"
+      >
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="languageKey">
+    <ng-template lpx-language-selection>
+      <ng-container *abpReplaceableTemplate="{ componentKey: languageKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="breadcrumbKey">
+    <ng-template lpx-breadcrumb-panel>
+      <ng-container
+        *abpReplaceableTemplate="{
+          componentKey: breadcrumbKey
+        }"
+      >
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="mobileNavbarKey">
+    <ng-template lpx-mobile-navbar-panel>
+      <ng-container *abpReplaceableTemplate="{ componentKey: mobileNavbarKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="mobileUserProfile">
+    <ng-template lpx-mn-user-profile-panel>
+      <ng-container
+        *abpReplaceableTemplate="{ componentKey: mobileUserProfile }"
+      >
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="footerKey">
+    <ng-template lpx-footer-panel>
+      <ng-container *abpReplaceableTemplate="{ componentKey: footerKey }">
+      </ng-container>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *abpIfReplaceableTemplateExists="mobileLanguageSelection">
+    <ng-template lpx-mn-language-selection>
+      <ng-container
+        *abpReplaceableTemplate="{ componentKey: mobileLanguageSelection }"
+      >
+      </ng-container>
+    </ng-template>
+  </ng-container>
+  <ng-template lpx-content>
+    <abp-page-alert-container
+      *abpReplaceableTemplate="{ componentKey: pageAlertContainerKey }"
+    ></abp-page-alert-container>
+
+    <router-outlet></router-outlet>
+  </ng-template>
+</lpx-layout>

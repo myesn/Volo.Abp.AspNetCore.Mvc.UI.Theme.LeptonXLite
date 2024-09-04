@@ -1,0 +1,163 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@proxy": [
+        "src/app/proxy/index.ts"
+      ],
+      "@proxy/*": [
+        "src/app/proxy/*"
+      ],
+      "@volo/abp.ng.lepton-x.core": [
+        "../../../../angular/libs/lepton-x-abp-core/src/index.ts"
+      ],
+      "@abp/ng.theme.lepton-x": [
+        "../../../../angular/libs/abp-lepton-x/src/index.ts"
+      ],
+      "@abp/ng.theme.lepton-x/styles": [
+        "../../../../angular/libs/abp-lepton-x/styles/src/index.ts"
+      ],
+      "@abp/ng.theme.lepton-x/account": [
+        "../../../../angular/libs/abp-lepton-x/account/src/public-api.ts"
+      ],
+      "@abp/ng.theme.lepton-x/layouts": [
+        "../../../../angular/libs/abp-lepton-x/layouts/src/public-api.ts"
+      ],
+      "@volo/ngx-lepton-x.core": [
+        "../../../../angular/libs/lepton-x-core/src/index.ts"
+      ],
+      "@volo/ngx-lepton-x.lite": [
+        "../../../../angular/libs/lepton-x-lite/src/index.ts"
+      ],
+      "@volo/ngx-lepton-x.lite/styles": [
+        "../../../../angular/libs/lepton-x-lite/styles/src/index.ts"
+      ],
+      "@volo/ngx-lepton-x.lite/layouts": [
+        "../../../../angular/libs/lepton-x-lite/layouts/src/index.ts"
+      ],
+      "@volo/ngx-lepton-x.lite/layouts/styles": [
+        "../../../../angular/libs/lepton-x-lite/layouts/styles/src/index.ts"
+      ],
+      "@abp/ng.core": [
+        "../../../../../abp/npm/ng-packs/packages/core/src/public-api.ts",
+        "node_modules/@abp/ng.core"
+      ],
+      "@abp/ng.core/locale": [
+        "../../../../../abp/npm/ng-packs/packages/core/locale/src/public-api.ts",
+        "node_modules/@abp/ng.core/locale"
+      ],
+      "@abp/ng.theme.shared": [
+        "node_modules/@abp/ng.theme.shared"
+      ],
+      "@abp/ng.components/chart.js": [
+        "node_modules/@abp/ng.components/chart.js"
+      ],
+      "@abp/ng.components/tree": [
+        "node_modules/@abp/ng.components/tree"
+      ],
+      "@abp/ng.components/extensible": [
+        "node_modules/@abp/ng.components/extensible"
+      ],
+      "@abp/ng.components/page": [
+        "node_modules/@abp/ng.components/page"
+      ],
+      "@abp/ng.permission-management": [
+        "node_modules/@abp/ng.permission-management"
+      ],
+      "@abp/ng.feature-management": [
+        "node_modules/@abp/ng.feature-management"
+      ],
+      "@abp/ng.setting-management": [
+        "node_modules/@abp/ng.setting-management"
+      ],
+      "@abp/ng.setting-management/config": [
+        "node_modules/@abp/ng.setting-management/config"
+      ],
+      "@angular/*": [
+        "node_modules/@angular/*"
+      ],
+      "@angular/common/locales": [
+        "node_modules/@angular/common/locales"
+      ],
+      "@abp/utils": [
+        "node_modules/@abp/utils"
+      ],
+      "@swimlane/*": [
+        "node_modules/@swimlane/*"
+      ],
+      "@fortawesome/*": [
+        "node_modules/@fortawesome/*"
+      ],
+      "@ng-bootstrap/*": [
+        "node_modules/@ng-bootstrap/*"
+      ],
+      "@ngx-validate/*": [
+        "node_modules/@ngx-validate/*"
+      ],
+      "@types/*": [
+        "node_modules/@types/*"
+      ],
+      "angular-oauth2-oidc": [
+        "node_modules/angular-oauth2-oidc"
+      ],
+      "bootstrap": [
+        "node_modules/bootstrap"
+      ],
+      "chart.js": [
+        "node_modules/chart.js"
+      ],
+      "font-awesome": [
+        "node_modules/font-awesome"
+      ],
+      "just-clone": [
+        "node_modules/just-clone"
+      ],
+      "just-compare": [
+        "node_modules/just-compare"
+      ],
+      "ng-zorro-antd": [
+        "node_modules/ng-zorro-antd"
+      ],
+      "ng-zorro-antd/*": [
+        "node_modules/ng-zorro-antd/*"
+      ],
+      "rxjs": [
+        "node_modules/rxjs"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ],
+      "typescript": [
+        "node_modules/typescript"
+      ],
+      "ts-toolbelt": [
+        "node_modules/ts-toolbelt"
+      ],
+      "tslib": [
+        "node_modules/tslib"
+      ],
+      "zone.js": [
+        "node_modules/zone.js"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false
+  }
+}

@@ -1,0 +1,97 @@
+﻿@inherits LayoutComponentBase
+@using Volo.Abp.AspNetCore.Components.Web.LeptonXLiteTheme.Themes.LeptonXLite.Toolbar
+@using Volo.Abp.AspNetCore.Components.Web.Theming.Components
+@using Volo.Abp.AspNetCore.Components.Web.LeptonXLiteTheme.Toolbars
+@using Volo.Abp.Ui.Branding;
+@using Volo.Abp.Ui.LayoutHooks
+@using Volo.Abp.AspNetCore.Components.Web.Theming.Components.LayoutHooks
+@using Volo.Abp.AspNetCore.Components.Web.Theming.Layout
+
+@inject IBrandingProvider BrandingProvider
+@{
+	var logoUrl = BrandingProvider.LogoUrl == null ? null : "--lpx-logo: url(" + BrandingProvider.LogoUrl + ");";
+}
+
+@if (logoUrl is not null)
+{
+	<style>
+		:root {
+		@logoUrl
+		}
+	</style>
+}
+
+<div>
+	<div id="lpx-wrapper">
+
+		<div class="lpx-mobile-navbar-container">
+			<header class="lpx-mobile-navbar">
+				<div class="lpx-logo-container">
+					<Branding />
+				</div>
+				<div class="user-menu">
+					<i class="lpx-icon bi bi-person lpx-toggle"
+					   data-lpx-toggle="mobile-user-menu-group"
+					   aria-hidden="true"></i>
+					<i class="lpx-icon bi bi-list lpx-toggle" data-lpx-toggle="mobile-navbar" aria-hidden="true"></i>
+				</div>
+			</header>
+
+			<div class="user-menu-groups d-none" id="mobile-user-menu-group">
+
+				<ToolbarItemsComponent Name="@LeptonXLiteToolbars.MainMobile" />
+			</div>
+
+			<nav class="lpx-mobile-nav-items d-none" id="mobile-navbar">
+
+				<ul class="lpx-nav-menu" id="mobile-sidebar">
+					<MainMenu />
+				</ul>
+			</nav>
+		</div>
+
+		<div class="lpx-sidebar-container">
+			<div class="lpx-sidebar overflow-auto" id="lpx-sidebar">
+				<nav class="lpx-nav">
+					<div class="lpx-logo-container">
+						<Branding />
+						<i class="lpx-icon bi bi-filter-left menu-collapse-icon hidden-in-hover-trigger"
+						   aria-hidden="true"
+						   data-lpx-toggle="sidebar"></i>
+					</div>
+
+					<ul class="lpx-nav-menu" id="desktop-sidebar">
+						<MainMenu />
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div class="lpx-content-container">
+			<div class="lpx-topbar-container">
+				<div class="lpx-topbar">
+					<nav aria-label="breadcrumb" class="lpx-breadcrumb-container">
+						<Breadcrumbs />
+					</nav>
+
+					<div class="lpx-topbar-content">
+						<ToolbarItemsComponent Name="@LeptonXLiteToolbars.Main" />
+					</div>
+				</div>
+			</div>
+
+			<div class="lpx-content">
+				<PageAlert />
+				<LayoutHook Name="@LayoutHooks.Body.First" Layout="@StandardLayouts.Application" />
+				@Body
+				<LayoutHook Name="@LayoutHooks.Body.Last" Layout="@StandardLayouts.Application" />
+				<DynamicLayoutComponent />
+				<UiMessageAlert />
+				<UiNotificationAlert />
+				<UiPageProgress />
+			</div>
+
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap5" Version="$(BlazoriseVersion)" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="$(BlazoriseVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Autofac.WebAssembly" Version="$(AbpVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Blazor.WebAssembly" Version="$(AbpVersion)" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Blazor.WebAssembly" Version="$(AbpVersion)" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Blazor.WebAssembly" Version="$(AbpVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Volo.Abp.AspNetCore.Components.WebAssembly.LeptonXLiteTheme\Volo.Abp.AspNetCore.Components.WebAssembly.LeptonXLiteTheme.csproj" />
+    <ProjectReference Include="..\LeptonXLite.DemoApp.HttpApi.Client\LeptonXLite.DemoApp.HttpApi.Client.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+@if (user$ | async; as userProfile) {
+  <ng-component>
+    <div
+      class="lpx-user-profile btn- toggle"
+      role="button"
+      (click)="toggleMenu()"
+    >
+      <lpx-avatar [avatar]="userProfile.avatar"></lpx-avatar>
+      <span class="user-full-name">{{ userProfile.fullName }}</span>
+    </div>
+    @if (userProfile.userActionGroups) {
+      <div class="action-group-menu" [class.d-none]="menuHidden">
+        @for (
+          actionGroup of userProfile.userActionGroups;
+          track $index;
+          let last = $last
+        ) {
+          @for (action of actionGroup; track $index) {
+            <a
+              class="action"
+              role="link"
+              (click)="onActionClick(action)"
+              [routerLink]="action.link"
+            >
+              {{ action?.text || '' | lpxTranslate | async }}
+            </a>
+          }
+
+          @if (!last) {
+            <div class="divider"></div>
+          }
+        }
+      </div>
+    }
+  </ng-component>
+}

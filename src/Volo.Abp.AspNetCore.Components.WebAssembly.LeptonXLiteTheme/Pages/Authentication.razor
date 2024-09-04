@@ -1,0 +1,17 @@
+﻿@page "/authentication/{action}"
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+<RemoteAuthenticatorView Action="@Action"  OnLogInSucceeded="OnLogInSucceeded" OnLogOutSucceeded="OnLogOutSucceeded"/>
+@inject WebAssemblyCachedApplicationConfigurationClient WebAssemblyCachedApplicationConfigurationClient
+
+@code{
+    [Parameter] public string Action { get; set; }
+
+    private async Task OnLogInSucceeded(RemoteAuthenticationState obj)
+    {
+        await WebAssemblyCachedApplicationConfigurationClient.InitializeAsync();
+    }
+    private async Task OnLogOutSucceeded(RemoteAuthenticationState obj)
+    {
+        await WebAssemblyCachedApplicationConfigurationClient.InitializeAsync();
+    }
+}

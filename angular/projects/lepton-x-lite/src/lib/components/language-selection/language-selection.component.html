@@ -1,0 +1,21 @@
+<div ngbDropdown class="lpx-language-selection">
+  @if (selectedLanguage$ | async; as selectedLanguage) {
+    <div ngbDropdownToggle role="button">
+      <lpx-icon iconClass="bi bi-globe"></lpx-icon>
+      @if (selectedLanguage; as val) {
+        <span [ngClass]="{ 'text-uppercase': !!val.twoLetterISOLanguageName }">
+          {{ val.twoLetterISOLanguageName || val.displayName }}
+        </span>
+      }
+    </div>
+  }
+  @if (langs$ | async; as langs) {
+    <div ngbDropdownMenu>
+      @for (lang of langs; track $index) {
+        <button ngbDropdownItem (click)="onLanguageSelection(lang)">
+          {{ lang.displayName }}
+        </button>
+      }
+    </div>
+  }
+</div>

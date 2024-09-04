@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/libs/abp-lepton-x",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "@abp/ng.core",
+    "@abp/ng.theme.shared",
+    "@abp/ng.account.core",
+    "@volo/ngx-lepton-x.lite",
+    "@volo/abp.ng.lepton-x.core"
+  ],
+  "assets": ["./assets"]
+}

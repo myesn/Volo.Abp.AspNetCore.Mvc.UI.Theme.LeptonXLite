@@ -1,0 +1,152 @@
+.confirmation .confirmation-backdrop {
+  background: rgba(104, 107, 110, 0.5);
+}
+.confirmation .confirmation-dialog {
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+.confirmation .confirmation-dialog .icon-container .icon {
+  stroke: #355dff;
+  color: #355dff;
+}
+.confirmation .confirmation-dialog .icon-container.info .icon {
+  stroke: #438aa7;
+  color: #438aa7;
+}
+.confirmation .confirmation-dialog .icon-container.success .icon {
+  stroke: #4fbf67;
+  color: #4fbf67;
+}
+.confirmation .confirmation-dialog .icon-container.warning .icon {
+  stroke: #ff9f38;
+  color: #ff9f38;
+}
+.confirmation .confirmation-dialog .icon-container.error .icon {
+  stroke: #c00d49;
+  color: #c00d49;
+}
+.confirmation .confirmation-dialog .content .title,
+.confirmation .confirmation-dialog .content .message {
+  color: #686b6e;
+}
+.confirmation .confirmation-dialog .footer {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.confirmation .confirmation-dialog .footer .confirmation-button {
+  background-color: #355dff;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.confirmation .confirmation-dialog .footer .confirmation-button:hover, .confirmation .confirmation-dialog .footer .confirmation-button:focus, .confirmation .confirmation-dialog .footer .confirmation-button:active {
+  background-color: rgba(53, 93, 255, 0.5);
+}
+
+.content-header-title {
+  color: #161616;
+  font-size: 1.5em !important;
+  font-weight: 600;
+  margin-bottom: 1em;
+  margin-top: 0.3333333333em;
+}
+
+/* TODO: lpx-page-header and lpx-page-title classes not exist. Find related properties
+.entry-row {
+  @extend .lpx-page-header;
+}
+
+.content-header-title {
+  @extend .lpx-page-title;
+}
+
+*/
+#toast-container.toast-top-full-width, #toast-container.toast-top-center {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 20px 15px 100px;
+}
+#toast-container.toast-bottom-full-width, #toast-container.toast-bottom-center {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 100px 15px 20px 15px;
+}
+#toast-container.toast-top-right {
+  top: 8px;
+  left: 8px;
+}
+#toast-container.toast-top-left {
+  top: 8px;
+  right: 8px;
+}
+#toast-container.toast-bottom-left {
+  bottom: 8px;
+  right: 8px;
+}
+#toast-container.toast-bottom-right {
+  bottom: 8px;
+  left: 8px;
+}
+#toast-container > div {
+  opacity: 0.975;
+}
+#toast-container button.toast-close-button {
+  color: #000;
+}
+
+.dataTables_wrapper,
+.tab-content {
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+  padding: 1.5rem !important;
+}
+
+.nav-tabs {
+  background: #ffffff;
+  box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+  padding: 0 1.5rem !important;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem !important;
+}
+
+.card .nav-tabs {
+  background: none;
+  box-shadow: none;
+  padding: 0 !important;
+  border-radius: none;
+}
+.card .tab-content {
+  background: none;
+  box-shadow: none;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.tab-content .card {
+  background: none;
+  box-shadow: none;
+  padding: 0 !important;
+}
+
+.modal-body .tab-content {
+  background: none;
+  box-shadow: none;
+}
+
+.modal-body .nav-tabs,
+.card .nav-tabs,
+.tab-content .nav-tabs {
+  background: none;
+  box-shadow: none;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+hr {
+  opacity: 0.1 !important;
+}
+
+.abp-block-area {
+  background: var(--lpx-card-bg);
+}
+
+/*# sourceMappingURL=abp-bundle.rtl.css.map */

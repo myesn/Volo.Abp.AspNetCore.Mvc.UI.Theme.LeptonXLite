@@ -1,0 +1,38 @@
+<div class="lpx-mobile-navbar-container">
+  <header class="lpx-mobile-navbar">
+    <div class="lpx-logo-container">
+      <ng-container
+        *ngTemplateOutlet="logoPanel?.template || defaultLogo"
+      ></ng-container>
+    </div>
+    <div class="user-menu">
+      <lpx-icon
+        iconClass="bi bi-person"
+        role="button"
+        (click)="toggleUserMenu()"
+      ></lpx-icon>
+      <lpx-icon
+        iconClass="bi bi-list"
+        role="button"
+        (click)="toggleNavbar()"
+      ></lpx-icon>
+    </div>
+  </header>
+
+  <div class="user-menu-groups" [class.d-none]="userMenuHidden">
+    <ng-content>
+    </ng-content>
+  </div>
+
+  <nav class="lpx-mobile-nav-items" [class.d-none]="navItemsHidden">
+    <lpx-navbar-routes
+      [navbarItems]="navService.navbarItems$ | async"
+      [routerItem]="true"
+      (routeClick)="toggleNavbar()"
+    ></lpx-navbar-routes>
+  </nav>
+</div>
+
+<ng-template #defaultLogo>
+  <lpx-brand-logo></lpx-brand-logo>
+</ng-template>

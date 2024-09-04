@@ -1,0 +1,12 @@
+﻿@using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.Themes.LeptonXLite.Components.Menu
+@model MenuViewModel
+
+@if (Model != null)
+{
+	@foreach (var menuItem in Model.Items)
+	{
+		<li class="outer-menu-item">
+			@await Html.PartialAsync("~/Themes/LeptonXLite/Components/Menu/_MenuItem.cshtml", menuItem)
+		</li>
+	}
+}

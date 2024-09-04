@@ -1,0 +1,20 @@
+﻿@using System.Globalization
+
+@if (ViewModel.HasLanguages)
+{
+	<div class="lpx-language-selection btn-toggle lpx-toggle" role="button" data-lpx-toggle="mobile-language">
+		<i class="lpx-icon bi bi-globe" aria-hidden="true"></i>
+		<span id="lang">@(new CultureInfo(ViewModel.CurrentLanguage.CultureName).TwoLetterISOLanguageName.ToUpperInvariant())</span>
+	</div>
+
+	<div class="action-group-menu d-none" id="mobile-language">
+
+		@foreach (var language in ViewModel.Languages)
+		{
+			var twoLetterLanguageName = new CultureInfo(language.CultureName).TwoLetterISOLanguageName.ToUpperInvariant();
+			
+			<a class="action" role="button" @onclick="()=>ViewModel.LanguagePlatformManager.ChangeAsync(language)"> @language.DisplayName / @twoLetterLanguageName </a>
+		}
+
+	</div>
+}

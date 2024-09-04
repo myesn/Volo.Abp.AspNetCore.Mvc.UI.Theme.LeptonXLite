@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32519.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58E47500-2571-4B38-84FE-3455689053E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Application", "LeptonXLite.DemoApp.Application\LeptonXLite.DemoApp.Application.csproj", "{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Application.Contracts", "LeptonXLite.DemoApp.Application.Contracts\LeptonXLite.DemoApp.Application.Contracts.csproj", "{6411B6C3-3658-42DA-BC92-FB35DB92C90B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Blazor", "LeptonXLite.DemoApp.Blazor\LeptonXLite.DemoApp.Blazor.csproj", "{5D0E867B-B690-4EF3-A984-A5C32F0074AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Blazor.Server", "LeptonXLite.DemoApp.Blazor.Server\LeptonXLite.DemoApp.Blazor.Server.csproj", "{427AE346-F7F4-487E-97CD-B7F2C18E7D45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Domain", "LeptonXLite.DemoApp.Domain\LeptonXLite.DemoApp.Domain.csproj", "{DE01AF7E-0589-44B5-995E-EDAD314528E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Domain.Shared", "LeptonXLite.DemoApp.Domain.Shared\LeptonXLite.DemoApp.Domain.Shared.csproj", "{94A190BB-62A8-400C-A114-B1A37F5B6227}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.HttpApi", "LeptonXLite.DemoApp.HttpApi\LeptonXLite.DemoApp.HttpApi.csproj", "{A535F40C-B6B2-4818-A019-3465994E1FF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.HttpApi.Client", "LeptonXLite.DemoApp.HttpApi.Client\LeptonXLite.DemoApp.HttpApi.Client.csproj", "{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.HttpApi.Host", "LeptonXLite.DemoApp.HttpApi.Host\LeptonXLite.DemoApp.HttpApi.Host.csproj", "{F490D26D-0B20-4C16-AF45-DC90586C7203}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.MongoDB", "LeptonXLite.DemoApp.MongoDB\LeptonXLite.DemoApp.MongoDB.csproj", "{130BA00B-0A37-4126-AB90-825499E8EDC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeptonXLite.DemoApp.Web", "LeptonXLite.DemoApp.Web\LeptonXLite.DemoApp.Web.csproj", "{0BE30B12-1797-4123-A240-86CF78A61D02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6411B6C3-3658-42DA-BC92-FB35DB92C90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6411B6C3-3658-42DA-BC92-FB35DB92C90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6411B6C3-3658-42DA-BC92-FB35DB92C90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6411B6C3-3658-42DA-BC92-FB35DB92C90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0E867B-B690-4EF3-A984-A5C32F0074AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0E867B-B690-4EF3-A984-A5C32F0074AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0E867B-B690-4EF3-A984-A5C32F0074AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0E867B-B690-4EF3-A984-A5C32F0074AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427AE346-F7F4-487E-97CD-B7F2C18E7D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427AE346-F7F4-487E-97CD-B7F2C18E7D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427AE346-F7F4-487E-97CD-B7F2C18E7D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427AE346-F7F4-487E-97CD-B7F2C18E7D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE01AF7E-0589-44B5-995E-EDAD314528E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE01AF7E-0589-44B5-995E-EDAD314528E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE01AF7E-0589-44B5-995E-EDAD314528E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE01AF7E-0589-44B5-995E-EDAD314528E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94A190BB-62A8-400C-A114-B1A37F5B6227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A190BB-62A8-400C-A114-B1A37F5B6227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A190BB-62A8-400C-A114-B1A37F5B6227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A190BB-62A8-400C-A114-B1A37F5B6227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A535F40C-B6B2-4818-A019-3465994E1FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A535F40C-B6B2-4818-A019-3465994E1FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A535F40C-B6B2-4818-A019-3465994E1FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A535F40C-B6B2-4818-A019-3465994E1FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F490D26D-0B20-4C16-AF45-DC90586C7203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F490D26D-0B20-4C16-AF45-DC90586C7203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F490D26D-0B20-4C16-AF45-DC90586C7203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F490D26D-0B20-4C16-AF45-DC90586C7203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130BA00B-0A37-4126-AB90-825499E8EDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130BA00B-0A37-4126-AB90-825499E8EDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130BA00B-0A37-4126-AB90-825499E8EDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130BA00B-0A37-4126-AB90-825499E8EDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE30B12-1797-4123-A240-86CF78A61D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE30B12-1797-4123-A240-86CF78A61D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE30B12-1797-4123-A240-86CF78A61D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE30B12-1797-4123-A240-86CF78A61D02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CA2120B-51F3-4FF7-8599-B51EDC43EDFA} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{6411B6C3-3658-42DA-BC92-FB35DB92C90B} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{5D0E867B-B690-4EF3-A984-A5C32F0074AD} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{427AE346-F7F4-487E-97CD-B7F2C18E7D45} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{DE01AF7E-0589-44B5-995E-EDAD314528E2} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{94A190BB-62A8-400C-A114-B1A37F5B6227} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{A535F40C-B6B2-4818-A019-3465994E1FF9} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{EE5FF1EC-8EE9-49C2-A3B0-79BFEB185E4C} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{F490D26D-0B20-4C16-AF45-DC90586C7203} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{130BA00B-0A37-4126-AB90-825499E8EDC9} = {58E47500-2571-4B38-84FE-3455689053E9}
+		{0BE30B12-1797-4123-A240-86CF78A61D02} = {58E47500-2571-4B38-84FE-3455689053E9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2F0B391-30D0-45F8-B181-8ADEB08F24F6}
+	EndGlobalSection
+EndGlobal

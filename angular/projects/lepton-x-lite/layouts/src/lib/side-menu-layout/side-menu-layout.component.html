@@ -1,0 +1,120 @@
+@if (layoutService.containerClass$ | async; as containerClass) {
+  <div id="lpx-wrapper" [ngClass]="containerClass">
+    <ng-container
+      *ngTemplateOutlet="mobileNavbarPanel?.template || defaultMobileNavbar"
+    >
+    </ng-container>
+    <ng-template #defaultMobileNavbar>
+      <lpx-mobile-navbar *lpxResponsive="'all md-none'">
+        <ng-container
+          *ngTemplateOutlet="
+            mobileUserProfilePanelDirective?.template ||
+            defaultMobileUserProfile
+          "
+        >
+        </ng-container>
+        <ng-template #defaultMobileUserProfile>
+          <lpx-mn-user-profile class="d-block"></lpx-mn-user-profile>
+        </ng-template>
+
+        <ng-container
+          *ngTemplateOutlet="
+            mobileLanguageSelectionDirective?.template ||
+            defaultMobilLanguageSelection
+          "
+        >
+        </ng-container>
+        <ng-template #defaultMobilLanguageSelection>
+          <lpx-mn-language-selection
+            class="d-block"
+          ></lpx-mn-language-selection>
+        </ng-template>
+        @if (logoPanel?.template) {
+          <ng-container>
+            <ng-template lpx-logo-panel>
+              <ng-container
+                *ngTemplateOutlet="logoPanel!.template"
+              ></ng-container>
+            </ng-template>
+          </ng-container>
+        }
+      </lpx-mobile-navbar>
+    </ng-template>
+
+    <div class="lpx-sidebar-container" *lpxResponsive="'md'">
+      <div class="lpx-sidebar">
+        <ng-container
+          *ngTemplateOutlet="navbarPanel?.template || defaultNavbar"
+        ></ng-container>
+      </div>
+    </div>
+
+    <div class="lpx-content-container">
+      <div class="lpx-topbar-container">
+        <div class="lpx-topbar">
+          <div class="lpx-breadcrumb-container">
+            <ng-container *lpxResponsive="'md'">
+              <ng-container
+                *ngTemplateOutlet="
+                  breadcrumbPanel?.template || defaultBreadcrumb
+                "
+              ></ng-container>
+            </ng-container>
+          </div>
+          <div class="lpx-topbar-content" *lpxResponsive="'md'">
+            <ng-container
+              *ngTemplateOutlet="
+                topbarContentPanelDirective?.template || defaultTopbarContent
+              "
+            ></ng-container>
+          </div>
+        </div>
+      </div>
+      <div class="lpx-content">
+        <ng-container
+          *ngTemplateOutlet="contentPanel?.template || defaultContent"
+        ></ng-container>
+        <ng-template #defaultContent>
+          <ng-content></ng-content>
+        </ng-template>
+        <ng-container
+          *ngTemplateOutlet="footerPanelDirective?.template || defaultFooter"
+        ></ng-container>
+      </div>
+    </div>
+  </div>
+}
+
+<ng-template #defaultTopbarContent>
+  <lpx-toolbar-container></lpx-toolbar-container>
+</ng-template>
+
+<ng-template #defaultNavbar>
+  <lpx-navbar>
+    @if (logoPanel?.template) {
+      <ng-template lpx-logo-panel>
+        <ng-container *ngTemplateOutlet="logoPanel!.template"></ng-container>
+      </ng-template>
+    }
+  </lpx-navbar>
+</ng-template>
+
+<ng-template #defaultLogo>
+  <lpx-brand-logo></lpx-brand-logo>
+</ng-template>
+
+<ng-template #defaultBreadcrumb>
+  <lpx-breadcrumb></lpx-breadcrumb>
+</ng-template>
+
+<ng-template #defaultUserProfile>
+  <lpx-user-profile></lpx-user-profile>
+</ng-template>
+
+<ng-template #defaultLanguageSelection>
+  <lpx-language-selection></lpx-language-selection>
+</ng-template>
+
+<ng-template #defaultFooter>
+  <lpx-footer></lpx-footer>
+</ng-template>
